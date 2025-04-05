@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Formulários
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,55 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Formulários</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-input label="Insira um texto" placeholder="Texto" fill="solid" labelPlacement="stacked"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Insira um numero" label-placement="floating" fill="solid" type="number" placeholder="000" labelPlacement="stacked"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Insira uma senha" label-placement="floating" fill="solid" type="password" value="password" labelPlacement="stacked"></ion-input>
+        <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input labelPlacement="floating" fill="solid" placeholder="isepam@gmail.com" [clearInput]="true">
+          <div slot="label">Insira um email <ion-text color="danger">(Required)</ion-text></div>
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Insira o numero do telefone" label-placement="floating" fill="solid" type="tel" placeholder="888-888-8888" [counter]="true" labelPlacement="stacked"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+  <ion-row>
+    <ion-col>
+      <ion-range labelPlacement="fixed" label="Range"></ion-range>
+    </ion-col>
+    <ion-col>
+      <ion-range aria-label="Temperature">
+        <ion-icon slot="start" name="snow-outline"></ion-icon>
+        <ion-icon slot="end" name="sunny-outline"></ion-icon>
+      </ion-range>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-range aria-label="Dual Knobs Range" [dualKnobs]="true" [value]="{ lower: 20, upper: 80 }"></ion-range>
+    </ion-col>
+    <ion-col>
+      <ion-range aria-label="Range with ticks" [ticks]="true" [snaps]="true" [min]="0" [max]="10"></ion-range>
+    </ion-col>
+  </ion-row>
 </ion-content>
